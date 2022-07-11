@@ -17,9 +17,12 @@ end
 
 def ideal_numbers(n)
   arr = []
-  while arr.length <= n
-    perfect_number?(n)
-    n+=1
+  i = n
+  while arr.length < n
+    if perfect_number?(i)
+      arr << i
+    end
+    i += 1
   end
   arr
 end
